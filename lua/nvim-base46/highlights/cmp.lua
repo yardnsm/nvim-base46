@@ -6,8 +6,9 @@ M.setup = function(c, hi)
   hi.CmpItemAbbrMatch = { guifg = c.blue, bold = true }
   hi.CmpDoc = { guibg = c.darker_black }
   hi.CmpDocBorder = { guifg = c.darker_black, guibg = c.darker_black }
-  hi.CmpPmenu = { guibg = c.black }
+  hi.CmpPmenu = { guibg = c.black2 }
   hi.CmpSel = "PmenuSel"
+  hi.CmpItemMenu = { guifg = c.light_grey, italic = true }
 
   hi.CmpItemKindConstant = { guifg = c.base09 }
   hi.CmpItemKindFunction = { guifg = c.base0D }
@@ -40,30 +41,6 @@ M.setup = function(c, hi)
   hi.CmpItemKindCopilot = { guifg = c.green }
   hi.CmpItemKindCodeium = { guifg = c.vibrant_green }
   hi.CmpItemKindTabNine = { guifg = c.baby_pink }
-
-  local cmp_style = require("nvim-base46.config").options.cmp_style
-
-  -- TODO test this
-  if cmp_style == "atom" then
-    hi.CmpItemMenu = { guifg = c.light_grey, italic = true }
-    hi.CmpPmenu = { guibg = c.black2 }
-    hi.CmpDoc = { guibg = c.darker_black }
-    hi.CmpDocBorder = { guifg = c.darker_black, guibg = c.darker_black }
-  elseif cmp_style == "atom_colored" then
-    hi.CmpItemMenu = { guifg = c.light_grey, italic = true }
-    hi.CmpPmenu = { guibg = c.black2 }
-    hi.CmpDoc = { guibg = c.darker_black }
-    hi.CmpDocBorder = { guifg = c.darker_black, guibg = c.darker_black }
-  elseif cmp_style == "flat_light" then
-    hi.CmpPmenu = { guibg = c.black2 }
-    hi.CmpBorder = { guifg = c.black2, guibg = c.black2 }
-    hi.CmpDocBorder = { guifg = c.darker_black, guibg = c.darker_black }
-  elseif cmp_style == "flat_dark" then
-    hi.CmpPmenu = { guibg = c.darker_black }
-    hi.CmpBorder = { guifg = c.darker_black, guibg = c.darker_black }
-    hi.CmpDocBorder = { guifg = c.black2, guibg = c.black2 }
-    hi.CmpDoc = { guibg = c.black2 }
-  end
 end
 
 return M

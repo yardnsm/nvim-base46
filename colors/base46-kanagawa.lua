@@ -3,5 +3,5 @@
 
 local status_ok, base46 = pcall(require, "nvim-base46")
 if status_ok then
-  base46.load({ theme = "kanagawa" })
+  base46.setup({ theme = "kanagawa" })
 end

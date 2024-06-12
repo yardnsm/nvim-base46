@@ -3,6 +3,9 @@ local M = {}
 ---@class Config
 local defaults = {
   theme = "tomorrow_night",
+
+  ---@type 'borderless' | 'bordered'
+  telescope_style = "borderless",
 }
 
 ---@type Config

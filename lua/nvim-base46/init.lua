@@ -34,9 +34,10 @@ M.load = function(opts)
   highlights.setup(M.colors)
 end
 
----@param options Config
-M.setup = function(options)
-  config.extend(options)
+---@param opts Config
+M.setup = function(opts)
+  config.setup(opts)
+  M.load()
 end
 
 return M

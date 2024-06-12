@@ -2,7 +2,6 @@ local M = {}
 
 -- TODO add type definition
 M.setup = function(c, hi)
-
   -- TODO do we need this?
   hi.gitcommitOverflow = { guifg = c.base08 }
   hi.gitcommitSummary = { guifg = c.base0B }
@@ -19,6 +18,11 @@ M.setup = function(c, hi)
   hi.gitcommitUnmergedFile = { guifg = c.base08, bold = true }
   hi.gitcommitDiscardedFile = { guifg = c.base08, bold = true }
   hi.gitcommitSelectedFile = { guifg = c.base0B, bold = true }
+
+  -- GitSigns
+  hi.GitSignsAdd = { guifg = c.vibrant_green }
+  hi.GitSignsChange = { guifg = c.blue }
+  hi.GitSignsDelete = { guifg = c.red }
 end
 
 return M

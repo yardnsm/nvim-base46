@@ -2,6 +2,7 @@ local M = {}
 
 -- TODO add type definition
 M.setup = function(c, hi)
+  hi.MasonNormal = "Normal"
   hi.MasonHeader = { guibg = c.red, guifg = c.black }
   hi.MasonHighlight = { guifg = c.blue }
   hi.MasonHighlightBlock = { guifg = c.black, guibg = c.green }

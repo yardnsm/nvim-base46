@@ -44,7 +44,7 @@ write_colors_rtp() {
 
 local status_ok, base46 = pcall(require, "nvim-base46")
 if status_ok then
-  base46.load({ theme = "$theme_name" })
+  base46.setup({ theme = "$theme_name" })
 end
 EOF
 }
