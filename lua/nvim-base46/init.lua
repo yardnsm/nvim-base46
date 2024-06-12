@@ -1,3 +1,4 @@
+local util = require("nvim-base46.util")
 local config = require("nvim-base46.config")
 local highlights = require("nvim-base46.highlights")
 
@@ -7,7 +8,7 @@ local M = {}
 M.colors = {}
 
 ---@type table<string, vim.api.keyset.highlight>
-M.highlight = highlights.highlight
+M.highlight = util.highlight
 
 ---@param opts Config|nil
 M.load = function(opts)
