@@ -59,9 +59,8 @@ M.setup = function(c, hi)
   hi.Folded = { guifg = c.light_grey, guibg = c.black2 }
   hi.FoldColumn = { guifg = c.base0C, guibg = c.base01 }
 
-
   -- Floating windows
-  hi.FloatBorder = { guifg = c.blue }
+  hi.FloatBorder = { guifg = c.one_bg3, guibg = c.black }
   hi.NormalFloat = { guibg = c.darker_black }
 
   hi.WinSeparator = { guifg = c.line }
@@ -85,22 +84,15 @@ M.setup = function(c, hi)
 
   hi.LineNr = { guifg = c.grey }
   hi.Cursor = { guifg = c.base00, guibg = c.base05 }
-  hi.CursorLine = { guibg = "none", sp = "none" }
+  hi.CursorLine = { guibg = c.black2 }
   hi.CursorLineNr = { guifg = c.white }
-  hi.CursorColumn = { guibg = c.base01, sp = "none" }
-  hi.ColorColumn = { guibg = c.base01, sp = "none" }
+  hi.CursorColumn = { guibg = c.black2, sp = "none" }
+  hi.ColorColumn = { guibg = c.black2, sp = "none" }
   hi.Visual = { guibg = c.base02 }
   hi.VisualNOS = { guifg = c.base08 }
 
-  --Command-line expressions highlighting
+  -- Command-line expressions highlighting
   hi.NvimInternalError = { guifg = c.red }
-
-  -- TODO This belongs to syntax
-  hi.Comment = { guifg = c.grey_fg }
-  hi.Error = { guifg = c.base00, guibg = c.base08 }
-  hi.Debug = { guifg = c.base08 }
-  hi.Exception = { guifg = c.base08 }
-  hi.Macro = { guifg = c.base08 }
 end
 
 return M

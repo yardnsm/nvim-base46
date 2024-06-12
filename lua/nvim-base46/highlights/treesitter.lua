@@ -2,11 +2,11 @@ local M = {}
 
 -- TODO add type definition
 M.setup = function(c, hi)
-  hi["@variable"] = { guifg = c.base05 }
-  hi["@variable.builtin"] = { guifg = c.base09 }
-  hi["@variable.parameter"] = { guifg = c.base08 }
-  hi["@variable.member"] = { guifg = c.base08 }
-  hi["@variable.member.key"] = { guifg = c.base08 }
+  hi["@variable"] = { guifg = c.base08 }
+  hi["@variable.builtin"] = { guifg = c.base08, gui = "italic" }
+  hi["@variable.parameter"] = { guifg = c.base05 }
+  hi["@variable.member"] = { guifg = c.base05 }
+  hi["@variable.member.key"] = { guifg = c.base05 }
 
   hi["@module"] = { guifg = c.base08 }
   hi["@module.builtin"] = { guifg = c.base08, gui = "italic" }
@@ -25,6 +25,8 @@ M.setup = function(c, hi)
 
   hi["@annotation"] = { guifg = c.base0F }
   hi["@attribute"] = { guifg = c.base0A }
+  hi["@field"] = { guifg = c.base05 }
+  hi["@parameter"] = { guifg = c.base05 }
   hi["@error"] = { guifg = c.base08 }
 
   hi["@keyword.exception"] = { guifg = c.base08 }
@@ -62,9 +64,9 @@ M.setup = function(c, hi)
   hi["@type.builtin"] = { guifg = c.base0A }
   hi["@definition"] = { sp = c.base04, gui = 'underline' }
   hi["@scope"] = { bold = true }
-  hi["@property"] = { guifg = c.base08 }
+  hi["@property"] = { guifg = c.base05 }
 
-  -- markup
+  -- Markup
   hi["@markup.heading"] = { guifg = c.base0D }
   hi["@markup.raw"] = { guifg = c.base09 }
   hi["@markup.link"] = { guifg = c.base08 }

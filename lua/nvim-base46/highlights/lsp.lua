@@ -12,7 +12,13 @@ M.setup = function(c, hi)
   hi.DiagnosticHint = { guifg = c.purple }
   hi.DiagnosticError = { guifg = c.red }
   hi.DiagnosticWarn = { guifg = c.yellow }
-  hi.DiagnosticInformation = { guifg = c.green }
+  hi.DiagnosticInfo = { guifg = c.green }
+
+  hi.DiagnosticFloatingHint = "DiagnosticHint"
+  hi.DiagnosticFloatingError = "DiagnosticError"
+  hi.DiagnosticFloatingWarn = "DiagnosticWarn"
+  hi.DiagnosticFloatingInfo = "DiagnosticInfo"
+
   hi.LspSignatureActiveParameter = { guifg = c.black, guibg = c.green }
 end
 
