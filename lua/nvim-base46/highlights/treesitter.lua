@@ -11,9 +11,9 @@ M.setup = function(c, hi)
   hi["@module"] = { guifg = c.base08 }
   hi["@module.builtin"] = { guifg = c.base08, gui = "italic" }
 
-  hi["@constant"] = { guifg = c.base08 }
-  hi["@constant.builtin"] = { guifg = c.base09 }
-  hi["@constant.macro"] = { guifg = c.base08 }
+  hi["@constant"] = { guifg = c.base09 }
+  hi["@constant.builtin"] = { guifg = c.base09, gui = "italic" }
+  hi["@constant.macro"] = { guifg = c.base09 }
 
   hi["@string"] = { guifg = c.base0B }
   hi["@string.regex"] = { guifg = c.base0C }
@@ -34,7 +34,7 @@ M.setup = function(c, hi)
   hi["@keyword.function"] = { guifg = c.base0E }
   hi["@keyword.return"] = { guifg = c.base0E }
   hi["@keyword.operator"] = { guifg = c.base0E }
-  hi["@keyword.import"] = { link = "Include" }
+  hi["@keyword.import"] = { guifg = c.base0D }
   hi["@keyword.conditional"] = { guifg = c.base0E }
   hi["@keyword.conditional.ternary"] = { guifg = c.base0E }
   hi["@keyword.repeat"] = { guifg = c.base0A }

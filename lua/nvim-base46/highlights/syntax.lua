@@ -2,10 +2,9 @@ local M = {}
 
 -- TODO add type definition
 M.setup = function(c, hi)
-
   hi.Comment = { guifg = c.grey_fg }
 
-  hi.Constant = { guifg = c.base08 }
+  hi.Constant = { guifg = c.base09 }
   hi.String = { guifg = c.base0B }
   hi.Character = { guifg = c.base08 }
   hi.Number = { guifg = c.base09 }
