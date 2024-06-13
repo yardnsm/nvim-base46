@@ -1,4 +1,4 @@
--- AUTO-GENERATED FILE. DO NOT MODIFIY.
+-- AUTO-GENERATED FILE. DO NOT MODIFY.
 -- This theme was ported from https://github.com/NvChad/base46
 
 -- Thanks to original theme for existing https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_plus.json

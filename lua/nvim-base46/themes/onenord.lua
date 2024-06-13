@@ -1,4 +1,4 @@
--- AUTO-GENERATED FILE. DO NOT MODIFIY.
+-- AUTO-GENERATED FILE. DO NOT MODIFY.
 -- This theme was ported from https://github.com/NvChad/base46
 
 -- Credits to original https://github.com/arcticicestudio/nord-vim

@@ -1,4 +1,4 @@
--- AUTO-GENERATED FILE. DO NOT MODIFIY.
+-- AUTO-GENERATED FILE. DO NOT MODIFY.
 -- This theme was ported from https://github.com/NvChad/base46
 
 -- credits to original theme for existing https://github.com/primer/github-vscode-theme

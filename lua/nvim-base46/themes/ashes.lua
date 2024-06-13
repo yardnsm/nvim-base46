@@ -1,4 +1,4 @@
--- AUTO-GENERATED FILE. DO NOT MODIFIY.
+-- AUTO-GENERATED FILE. DO NOT MODIFY.
 -- This theme was ported from https://github.com/NvChad/base46
 
 -- credits to original theme https://github.com/chriskempson/base16-vim/blob/master/colors/base16-ashes.vim

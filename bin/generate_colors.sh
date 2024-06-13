@@ -20,7 +20,7 @@ write_colors_lua() {
   theme_dest="../lua/nvim-base46/themes/$theme_name.lua"
 
   cat <<EOF > "$theme_dest"
--- AUTO-GENERATED FILE. DO NOT MODIFIY.
+-- AUTO-GENERATED FILE. DO NOT MODIFY.
 -- This theme was ported from https://github.com/NvChad/base46
 
 $theme_contents
@@ -39,7 +39,7 @@ write_colors_rtp() {
   theme_dest="../colors/base46-$theme_name.lua"
 
   cat <<EOF > "$theme_dest"
--- AUTO-GENERATED FILE. DO NOT MODIFIY.
+-- AUTO-GENERATED FILE. DO NOT MODIFY.
 -- This theme was ported from https://github.com/NvChad/base46
 
 local status_ok, base46 = pcall(require, "nvim-base46")
