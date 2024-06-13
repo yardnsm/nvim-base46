@@ -9,12 +9,12 @@ M.setup = function(c, hi)
   hi.TelescopePromptTitle = { guifg = c.black, guibg = c.red }
   hi.TelescopePromptPrefix = { guifg = c.red, guibg = c.black2 }
 
-  hi.TelescopeMatching = { guifg = c.dark_purple, gui = "bold" }
-  hi.TelescopeResultsNormal = { guifg = c.grey_fg, guibg = c.darker_black }
-  hi.TelescopeSelection = { guibg = c.black2, guifg = c.grey_fg }
+  hi.TelescopeSelection = { guibg = c.black2, guifg = c.white }
   hi.TelescopeResultsDiffAdd = { guifg = c.green }
   hi.TelescopeResultsDiffChange = { guifg = c.yellow }
   hi.TelescopeResultsDiffDelete = { guifg = c.red }
+
+  hi.TelescopeMatching = { guibg = c.one_bg, guifg = c.blue }
 
   local telescope_style = require("nvim-base46.config").options.telescope_style
 
@@ -32,7 +32,6 @@ M.setup = function(c, hi)
     hi.TelescopePromptPrefix = { guifg = c.red, guibg = c.black }
     hi.TelescopePromptNormal = { guibg = c.black }
     hi.TelescopeNormal = { guibg = c.black }
-    hi.TelescopeResultsNormal = { guifg = c.grey_fg, guibg = c.black }
   end
 end
 

@@ -37,7 +37,6 @@ end
 ---@param opts Config
 M.setup = function(opts)
   config.setup(opts)
-  M.load()
 end
 
 return M
