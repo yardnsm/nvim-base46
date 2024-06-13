@@ -1,24 +1,25 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
   hi.Normal = { guifg = c.base05, guibg = c.base00 }
-  hi.Underlined = { underline = true }
+  hi.Underlined = { gui = "underline" }
   hi.TooLong = { guifg = c.base08 }
-  hi.Bold = { bold = true }
-  hi.Italic = { italic = true }
+  hi.Bold = { gui = "bold" }
+  hi.Italic = { gui = "italic" }
 
   -- Spell
-  hi.SpellBad = { undercurl = true, sp = c.base08 }
-  hi.SpellCap = { undercurl = true, sp = c.base0D }
-  hi.SpellLocal = { undercurl = true, sp = c.base0C }
-  hi.SpellRare = { undercurl = true, sp = c.base0E }
+  hi.SpellBad = { gui = "undercurl", guisp = c.base08 }
+  hi.SpellCap = { gui = "undercurl", guisp = c.base0D }
+  hi.SpellLocal = { gui = "undercurl", guisp = c.base0C }
+  hi.SpellRare = { gui = "undercurl", guisp = c.base0E }
 
   hi.NonText = { guifg = c.base03 }
 
   hi.Search = { guifg = c.base01, guibg = c.base0A }
   hi.IncSearch = { guifg = c.base01, guibg = c.base09 }
-  hi.Substitute = { guifg = c.base01, guibg = c.base0A, sp = "none" }
+  hi.Substitute = { guifg = c.base01, guibg = c.base0A, guisp = "none" }
 
   -- Diffs
   hi.DiffAdd = { guifg = c.blue }
@@ -30,13 +31,13 @@ M.setup = function(c, hi)
   hi.DiffRemoved = { guifg = c.red }
   hi.DiffText = { guifg = c.white, guibg = c.black2 }
 
-  hi.SignColumn = { guifg = c.base03, sp = "NONE" }
+  hi.SignColumn = { guifg = c.base03, guisp = "NONE" }
 
   hi.ModeMsg = { guifg = c.base0B }
   hi.MoreMsg = { guifg = c.base0B }
   hi.WarningMsg = { guifg = c.base08 }
   hi.ErrorMsg = { guifg = c.base08, guibg = c.base00 }
-  hi.QuickFixLine = { guibg = c.base01, sp = "none" }
+  hi.QuickFixLine = { guibg = c.base01, guisp = "none" }
 
   -- Pop-up menu
   hi.Pmenu = { guibg = c.one_bg }
@@ -79,15 +80,15 @@ M.setup = function(c, hi)
   hi.Directory = { guifg = c.base0D }
 
   hi.SpecialKey = { guifg = c.base03 }
-  hi.Title = { guifg = c.base0D, sp = "none" }
+  hi.Title = { guifg = c.base0D, guisp = "none" }
   hi.Question = { guifg = c.base0D }
 
   hi.LineNr = { guifg = c.grey }
   hi.Cursor = { guifg = c.base00, guibg = c.base05 }
   hi.CursorLine = { guibg = c.black2 }
   hi.CursorLineNr = { guifg = c.white }
-  hi.CursorColumn = { guibg = c.black2, sp = "none" }
-  hi.ColorColumn = { guibg = c.black2, sp = "none" }
+  hi.CursorColumn = { guibg = c.black2, guisp = "none" }
+  hi.ColorColumn = { guibg = c.black2, guisp = "none" }
   hi.Visual = { guibg = c.base02 }
   hi.VisualNOS = { guifg = c.base08 }
 

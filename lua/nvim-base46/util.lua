@@ -2,7 +2,7 @@ local M = {}
 
 ---This is a bit of syntactic sugar for creating highlight groups.
 ---Shamelessly taken from https://github.com/RRethy/base16-nvim
----@type table<string, vim.api.keyset.highlight>
+---@type HighlightsTable
 M.highlight = setmetatable({}, {
   __newindex = function(_, hlgroup, args)
     if "string" == type(args) then

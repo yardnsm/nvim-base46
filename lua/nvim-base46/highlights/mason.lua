@@ -1,6 +1,7 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
   hi.MasonNormal = "Normal"
   hi.MasonHeader = { guibg = c.red, guifg = c.black }

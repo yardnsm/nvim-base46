@@ -1,14 +1,15 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
   hi.CmpItemAbbr = { guifg = c.white }
-  hi.CmpItemAbbrMatch = { guifg = c.blue, bold = true }
+  hi.CmpItemAbbrMatch = { guifg = c.blue, gui = "bold" }
   hi.CmpDoc = { guibg = c.darker_black }
   hi.CmpDocBorder = { guifg = c.darker_black, guibg = c.darker_black }
   hi.CmpPmenu = { guibg = c.black2 }
   hi.CmpSel = "PmenuSel"
-  hi.CmpItemMenu = { guifg = c.light_grey, italic = true }
+  hi.CmpItemMenu = { guifg = c.light_grey, gui = "italic" }
 
   hi.CmpItemKindConstant = { guifg = c.base09 }
   hi.CmpItemKindFunction = { guifg = c.base0D }

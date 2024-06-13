@@ -1,6 +1,7 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
   hi["@variable"] = { guifg = c.base08 }
   hi["@variable.builtin"] = { guifg = c.base08, gui = "italic" }
@@ -62,8 +63,8 @@ M.setup = function(c, hi)
   hi["@text.emphasis"] = { guifg = c.base09 }
   hi["@text.strike"] = { guifg = c.base0F, gui = 'strikethrough' }
   hi["@type.builtin"] = { guifg = c.base0A }
-  hi["@definition"] = { sp = c.base04, gui = 'underline' }
-  hi["@scope"] = { bold = true }
+  hi["@definition"] = { guisp = c.base04, gui = 'underline' }
+  hi["@scope"] = { gui = "bold" }
   hi["@property"] = { guifg = c.base05 }
 
   -- Markup
@@ -73,9 +74,9 @@ M.setup = function(c, hi)
   hi["@markup.link.url"] = { guifg = c.base09, gui = 'underline' }
   hi["@markup.link.label"] = { guifg = c.base0C }
   hi["@markup.list"] = { guifg = c.base08 }
-  hi["@markup.strong"] = { bold = true }
+  hi["@markup.strong"] = { gui = "bold" }
   hi["@markup.underline"] = { gui = 'underline' }
-  hi["@markup.italic"] = { italic = true }
+  hi["@markup.italic"] = { gui = "italic" }
   hi["@markup.strikethrough"] = { gui = 'strikethrough' }
   hi["@markup.quote"] = { guibg = c.black2 }
 

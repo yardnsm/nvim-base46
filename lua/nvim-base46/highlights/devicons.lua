@@ -1,6 +1,7 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
   hi.DevIconDefault = { guifg = c.red }
   hi.DevIconc = { guifg = c.blue }

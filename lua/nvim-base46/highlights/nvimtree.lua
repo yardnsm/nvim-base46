@@ -1,6 +1,7 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
   hi.NvimTreeFolderIcon = { guifg = c.folder_bg }
   hi.NvimTreeFolderName = { guifg = c.folder_bg }
@@ -24,8 +25,8 @@ M.setup = function(c, hi)
   hi.NvimTreeGitDeleted = { guifg = c.red }
   hi.NvimTreeGitIgnored = { guifg = c.light_grey }
   hi.NvimTreeGitDirty = { guifg = c.red }
-  hi.NvimTreeSpecialFile = { guifg = c.yellow, bold = true }
-  hi.NvimTreeRootFolder = { guifg = c.red, bold = true }
+  hi.NvimTreeSpecialFile = { guifg = c.yellow, gui = "bold" }
+  hi.NvimTreeRootFolder = { guifg = c.red, gui = "bold" }
 end
 
 return M

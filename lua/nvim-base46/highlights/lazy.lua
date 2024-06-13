@@ -1,11 +1,12 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
   hi.LazyNormal = "Normal"
   hi.LazyH1 = { guibg = c.green, guifg = c.black }
   hi.LazyButton = { guibg = c.one_bg, guifg = c.light_grey }
-  hi.LazyH2 = { guifg = c.red, bold = true, underline = true }
+  hi.LazyH2 = { guifg = c.red, gui = "bold", gui = "underline" }
   hi.LazyReasonPlugin = { guifg = c.red }
   hi.LazyValue = { guifg = c.teal }
   hi.LazyDir = { guifg = c.base05 }

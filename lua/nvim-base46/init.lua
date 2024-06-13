@@ -4,7 +4,7 @@ local highlights = require("nvim-base46.highlights")
 
 local M = {}
 
--- TODO add type definition
+---@type Base46Table
 M.colors = {}
 
 ---@type table<string, vim.api.keyset.highlight>
@@ -32,6 +32,10 @@ M.load = function(opts)
 
   -- Highlight!
   highlights.setup(M.colors)
+
+  if config.options.terminal_colors then
+    highlights.setup_terminal(M.colors)
+  end
 end
 
 ---@param opts Config

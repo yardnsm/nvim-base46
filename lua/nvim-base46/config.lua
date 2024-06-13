@@ -6,6 +6,8 @@ local defaults = {
 
   ---@type 'borderless' | 'bordered'
   telescope_style = "borderless",
+
+  terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
 }
 
 ---@type Config

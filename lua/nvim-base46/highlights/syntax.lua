@@ -1,6 +1,7 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
   hi.Comment = { guifg = c.grey_fg }
 
@@ -11,23 +12,23 @@ M.setup = function(c, hi)
   hi.Boolean = { guifg = c.base09 }
   hi.Float = { guifg = c.base09 }
 
-  hi.Identifier = { guifg = c.base08, sp = "none" }
+  hi.Identifier = { guifg = c.base08, guisp = "none" }
   hi.Function = { guifg = c.base0D }
 
   hi.Statement = { guifg = c.base08 }
   hi.Conditional = { guifg = c.base0E }
   hi.Repeat = { guifg = c.base0A }
   hi.Label = { guifg = c.base0A }
-  hi.Operator = { guifg = c.base05, sp = "none" }
+  hi.Operator = { guifg = c.base05, guisp = "none" }
   hi.Keyword = { guifg = c.base0E }
   hi.Exception = { guifg = c.base08 }
 
   hi.PreProc = { guifg = c.base0A }
   hi.Include = { guifg = c.base0D }
-  hi.Define = { guifg = c.base0E, sp = "none" }
+  hi.Define = { guifg = c.base0E, guisp = "none" }
   hi.Macro = { guifg = c.base08 }
 
-  hi.Type = { guifg = c.base0A, sp = "none" }
+  hi.Type = { guifg = c.base0A, guisp = "none" }
   hi.StorageClass = { guifg = c.base0A }
   hi.Structure = { guifg = c.base0E }
   hi.Typedef = { guifg = c.base0A }

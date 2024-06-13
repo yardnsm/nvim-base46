@@ -1,8 +1,8 @@
 local M = {}
 
--- TODO add type definition
+---@param c Base46Table
+---@param hi HighlightsTable
 M.setup = function(c, hi)
-  -- TODO do we need this?
   hi.gitcommitOverflow = { guifg = c.base08 }
   hi.gitcommitSummary = { guifg = c.base0B }
   hi.gitcommitComment = { guifg = c.base03 }
@@ -13,11 +13,11 @@ M.setup = function(c, hi)
   hi.gitcommitSelectedType = { guifg = c.base0D }
   hi.gitcommitUnmergedType = { guifg = c.base0D }
   hi.gitcommitDiscardedType = { guifg = c.base0D }
-  hi.gitcommitBranch = { guifg = c.base09, bold = true }
+  hi.gitcommitBranch = { guifg = c.base09, gui = "bold" }
   hi.gitcommitUntrackedFile = { guifg = c.base0A }
-  hi.gitcommitUnmergedFile = { guifg = c.base08, bold = true }
-  hi.gitcommitDiscardedFile = { guifg = c.base08, bold = true }
-  hi.gitcommitSelectedFile = { guifg = c.base0B, bold = true }
+  hi.gitcommitUnmergedFile = { guifg = c.base08, gui = "bold" }
+  hi.gitcommitDiscardedFile = { guifg = c.base08, gui = "bold" }
+  hi.gitcommitSelectedFile = { guifg = c.base0B, gui = "bold" }
 
   -- GitSigns
   hi.GitSignsAdd = { guifg = c.vibrant_green }
