@@ -11,6 +11,9 @@ M.setup = function(c, hi)
   hi.CmpSel = "PmenuSel"
   hi.CmpItemMenu = { guifg = c.light_grey, gui = "italic" }
 
+  -- This is the "default" style
+  hi.CmpBorder = { guifg = c.grey_fg }
+
   hi.CmpItemKindConstant = { guifg = c.base09 }
   hi.CmpItemKindFunction = { guifg = c.base0D }
   hi.CmpItemKindIdentifier = { guifg = c.base08 }

@@ -15,7 +15,7 @@ M.setup = function(c, hi)
   hi.SpellLocal = { gui = "undercurl", guisp = c.base0C }
   hi.SpellRare = { gui = "undercurl", guisp = c.base0E }
 
-  hi.NonText = { guifg = c.base03 }
+  hi.NonText = { guifg = c.grey_fg }
 
   hi.Search = { guifg = c.base01, guibg = c.base0A }
   hi.IncSearch = { guifg = c.base01, guibg = c.base09 }
@@ -61,7 +61,7 @@ M.setup = function(c, hi)
   hi.FoldColumn = { guifg = c.base0C, guibg = c.base01 }
 
   -- Floating windows
-  hi.FloatBorder = { guifg = c.one_bg3, guibg = c.black }
+  hi.FloatBorder = { guifg = c.blue }
   hi.NormalFloat = { guibg = c.darker_black }
 
   hi.WinSeparator = { guifg = c.line }

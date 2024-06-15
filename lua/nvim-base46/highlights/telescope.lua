@@ -31,8 +31,8 @@ M.setup = function(c, hi)
     hi.TelescopeResultsTitle = { guifg = c.black, guibg = c.green }
     hi.TelescopePreviewTitle = { guifg = c.black, guibg = c.blue }
     hi.TelescopePromptPrefix = { guifg = c.red, guibg = c.black }
-    hi.TelescopePromptNormal = { guibg = c.black }
     hi.TelescopeNormal = { guibg = c.black }
+    hi.TelescopePromptNormal = { guibg = c.black }
   end
 end
 
