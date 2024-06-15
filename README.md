@@ -3,7 +3,7 @@
 A port of [NvChad's base46 colorscheme](https://github.com/NvChad/base46) to be used in any Neovim
 environment.
 
-Currently this is still a **work in progress**, including support for plugins that I used mainly.
+Currently this is still a **work in progress**, including support for plugins that I mainly use.
 
 ## Installation
 
@@ -18,3 +18,9 @@ Install the theme with your preferred package manager, such as
   opts = {},
 }
 ```
+
+---
+
+## License
+
+MIT © [Yarden Sod-Moriah](https://ysm.sh/)
