@@ -33,7 +33,7 @@
 ---@field statusline_bg string
 ---@field lightbg string
 ---@field pmenu_bg string
----@field folder_bgstring string
+---@field folder_bg string
 ---@field base00 string
 ---@field base01 string
 ---@field base02 string
