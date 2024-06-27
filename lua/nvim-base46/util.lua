@@ -6,7 +6,7 @@ M.fg = "#ffffff"
 ---This is a bit of syntactic sugar for creating highlight groups.
 ---Shamelessly taken from https://github.com/RRethy/base16-nvim
 ---TODO make this more similar to nvim_set_hl args
----@type HighlightsTable
+---@type base46.HighlightsTable
 M.highlight = setmetatable({}, {
   __newindex = function(_, hlgroup, args)
     if "string" == type(args) then

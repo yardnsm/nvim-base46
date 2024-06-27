@@ -1,7 +1,7 @@
 local M = {}
 
----@param c Base46Table
----@param hi HighlightsTable
+---@param c base46.Colors
+---@param hi base46.HighlightsTable
 M.setup = function(c, hi)
   -- LSP References
   hi.LspReferenceText = { guifg = c.darker_black, guibg = c.white }

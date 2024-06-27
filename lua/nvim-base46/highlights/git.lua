@@ -1,7 +1,7 @@
 local M = {}
 
----@param c Base46Table
----@param hi HighlightsTable
+---@param c base46.Colors
+---@param hi base46.HighlightsTable
 M.setup = function(c, hi)
   -- https://github.com/neovim/neovim/blob/master/runtime/syntax/gitcommit.vim
   hi.gitcommitOverflow = { guifg = c.base08 }

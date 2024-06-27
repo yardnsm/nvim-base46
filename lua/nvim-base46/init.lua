@@ -4,13 +4,13 @@ local highlights = require("nvim-base46.highlights")
 
 local M = {}
 
----@type Base46Table
+---@type base46.Colors
 M.colors = nil
 
----@type HighlightsTable
+---@type base46.HighlightsTable
 M.highlight = util.highlight
 
----@param opts Config|nil
+---@param opts base46.Config|nil
 M.load = function(opts)
   if opts then
     config.extend(opts)
@@ -42,7 +42,7 @@ M.load = function(opts)
   end
 end
 
----@param opts Config
+---@param opts base46.Config
 M.setup = function(opts)
   config.setup(opts)
 end

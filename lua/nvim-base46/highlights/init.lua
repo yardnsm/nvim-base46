@@ -2,7 +2,7 @@ local util = require("nvim-base46.util")
 
 local M = {}
 
----@param colors Base46Table
+---@param colors base46.Colors
 M.setup = function(colors)
   local c = colors
   local hi = util.highlight
@@ -22,7 +22,7 @@ M.setup = function(colors)
   require("nvim-base46.highlights.devicons").setup(c, hi)
 end
 
----@param colors Base46Table
+---@param colors base46.Colors
 M.setup_terminal = function(colors)
   vim.g.terminal_color_0 = colors.base00
   vim.g.terminal_color_1 = colors.base08

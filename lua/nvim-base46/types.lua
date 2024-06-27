@@ -1,8 +1,8 @@
----@alias HighlightsTable table<string, vim.api.keyset.highlight | string>
+---@alias base46.HighlightsTable table<string, vim.api.keyset.highlight | string>
 
 ---A table representation of all the base46 colors. It differs a bit from the original base46 table,
 ---as we're combining the base16 and base30 tables into one for convenience.
----@class Base46Table
+---@class base46.Colors
 ---@field type "light" | "dark"
 ---@field white string
 ---@field black string usually your theme bg

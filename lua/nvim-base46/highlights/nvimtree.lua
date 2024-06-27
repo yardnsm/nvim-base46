@@ -1,7 +1,7 @@
 local M = {}
 
----@param c Base46Table
----@param hi HighlightsTable
+---@param c base46.Colors
+---@param hi base46.HighlightsTable
 M.setup = function(c, hi)
   hi.NvimTreeFolderIcon = { guifg = c.folder_bg }
   hi.NvimTreeFolderName = { guifg = c.folder_bg }

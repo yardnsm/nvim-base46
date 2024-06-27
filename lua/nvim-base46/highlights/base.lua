@@ -1,7 +1,7 @@
 local M = {}
 
----@param c Base46Table
----@param hi HighlightsTable
+---@param c base46.Colors
+---@param hi base46.HighlightsTable
 M.setup = function(c, hi)
   hi.Normal = { guifg = c.base05, guibg = c.base00 }
   hi.Underlined = { gui = "underline" }
