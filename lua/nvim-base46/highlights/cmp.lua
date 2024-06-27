@@ -5,14 +5,7 @@ local M = {}
 M.setup = function(c, hi)
   hi.CmpItemAbbr = { guifg = c.white }
   hi.CmpItemAbbrMatch = { guifg = c.blue, gui = "bold" }
-  hi.CmpDoc = { guibg = c.darker_black }
-  hi.CmpDocBorder = { guifg = c.darker_black, guibg = c.darker_black }
-  hi.CmpPmenu = { guibg = c.black2 }
-  hi.CmpSel = "PmenuSel"
   hi.CmpItemMenu = { guifg = c.light_grey, gui = "italic" }
-
-  -- This is the "default" style
-  hi.CmpBorder = { guifg = c.grey_fg }
 
   hi.CmpItemKindConstant = { guifg = c.base09 }
   hi.CmpItemKindFunction = { guifg = c.base0D }

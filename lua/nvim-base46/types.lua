@@ -3,6 +3,7 @@
 ---A table representation of all the base46 colors. It differs a bit from the original base46 table,
 ---as we're combining the base16 and base30 tables into one for convenience.
 ---@class Base46Table
+---@field type "light" | "dark"
 ---@field white string
 ---@field black string usually your theme bg
 ---@field darker_black string 6% darker than black

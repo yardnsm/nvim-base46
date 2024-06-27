@@ -5,9 +5,9 @@ local highlights = require("nvim-base46.highlights")
 local M = {}
 
 ---@type Base46Table
-M.colors = {}
+M.colors = nil
 
----@type table<string, vim.api.keyset.highlight>
+---@type HighlightsTable
 M.highlight = util.highlight
 
 ---@param opts Config|nil
@@ -16,7 +16,7 @@ M.load = function(opts)
     config.extend(opts)
   end
 
-  M._theme = config.options.theme
+  local theme = config.options.theme
 
   vim.o.termguicolors = true
 
@@ -25,10 +25,14 @@ M.load = function(opts)
     vim.cmd("syntax reset")
   end
 
-  vim.g.colors_name = string.format("base46-%s", M._theme)
+  vim.g.colors_name = string.format("base46-%s", theme)
 
   -- Update theme colors
-  M.colors = require(string.format("nvim-base46.themes.%s", M._theme))
+  M.colors = require(string.format("nvim-base46.themes.%s", theme))
+
+  -- Update base colors (used for util.darken and util.lighten)
+  util.bg = M.colors.black
+  util.fg = M.colors.white
 
   -- Highlight!
   highlights.setup(M.colors)

@@ -23,12 +23,8 @@ M.setup = function(c, hi)
 
   -- Diffs
   hi.DiffAdd = { guifg = c.blue }
-  hi.DiffAdded = { guifg = c.green }
   hi.DiffChange = { guifg = c.light_grey }
-  hi.DiffChangeDelete = { guifg = c.red }
-  hi.DiffModified = { guifg = c.orange }
   hi.DiffDelete = { guifg = c.red }
-  hi.DiffRemoved = { guifg = c.red }
   hi.DiffText = { guifg = c.white, guibg = c.black2 }
 
   hi.SignColumn = { guifg = c.base03, guisp = "NONE" }
@@ -47,7 +43,7 @@ M.setup = function(c, hi)
 
   hi.TabLine = { guifg = c.base03, guibg = c.base01 }
   hi.TabLineFill = { guifg = c.base03, guibg = c.base01 }
-  hi.TabLineSel = { guifg = c.base0B, guibg = c.base01 }
+  hi.TabLineSel = { guifg = c.base0B, guibg = c.base01, gui = "bold" }
 
   hi.StatusLine = { guifg = c.light_grey, guibg = c.statusline_bg }
   hi.StatusLineNC = { guifg = c.base03, guibg = c.one_bg }

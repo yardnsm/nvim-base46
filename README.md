@@ -1,7 +1,8 @@
 # nvim-base46
 
-A port of [NvChad's base46 colorscheme](https://github.com/NvChad/base46) to be used in any Neovim
-environment.
+A custom port of [NvChad's base46 colorscheme](https://github.com/NvChad/base46) to be used in any
+Neovim environment. By "custom" I mean somewhat modified, removing some unnecessary highlight groups
+that was apparent in the original repo.
 
 Currently this is still a **work in progress**, including support for plugins that I mainly use.
 
