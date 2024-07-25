@@ -4,8 +4,6 @@ M.bg = "#000000"
 M.fg = "#ffffff"
 
 ---This is a bit of syntactic sugar for creating highlight groups.
----Shamelessly taken from https://github.com/RRethy/base16-nvim
----TODO make this more similar to nvim_set_hl args
 ---@type base46.HighlightsTable
 M.highlight = setmetatable({}, {
   __newindex = function(_, hlgroup, args)
@@ -24,6 +22,8 @@ local function hexToRgb(c)
   return { tonumber(c:sub(2, 3), 16), tonumber(c:sub(4, 5), 16), tonumber(c:sub(6, 7), 16) }
 end
 
+--- Taken from tokyonight:
+--- https://github.com/folke/tokyonight.nvim/blob/b0e7c7382a7e8f6456f2a95655983993ffda745e/lua/tokyonight/util.lua#L27-L51
 ---@param foreground string foreground color
 ---@param background string background color
 ---@param alpha number|string number between 0 and 1. 0 results in bg, 1 results in fg
