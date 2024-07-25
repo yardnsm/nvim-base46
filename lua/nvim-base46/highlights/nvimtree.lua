@@ -1,33 +1,32 @@
 local M = {}
 
----@param c base46.Colors
----@param hi base46.HighlightsTable
+---@type base46.Handler
 M.setup = function(c, hi)
-  hi.NvimTreeFolderIcon = { guifg = c.folder_bg }
-  hi.NvimTreeFolderName = { guifg = c.folder_bg }
-  hi.NvimTreeOpenedFolderName = { guifg = c.folder_bg }
-  hi.NvimTreeEmptyFolderName = { guifg = c.folder_bg }
+  hi.NvimTreeFolderIcon = { fg = c.folder_bg }
+  hi.NvimTreeFolderName = { fg = c.folder_bg }
+  hi.NvimTreeOpenedFolderName = { fg = c.folder_bg }
+  hi.NvimTreeEmptyFolderName = { fg = c.folder_bg }
 
-  hi.NvimTreeFolderArrowOpen = { guifg = c.folder_bg }
-  hi.NvimTreeFolderArrowClosed = { guifg = c.grey_fg }
+  hi.NvimTreeFolderArrowOpen = { fg = c.folder_bg }
+  hi.NvimTreeFolderArrowClosed = { fg = c.grey_fg }
 
-  hi.NvimTreeIndentMarker = { guifg = c.grey_fg }
+  hi.NvimTreeIndentMarker = { fg = c.grey_fg }
 
-  hi.NvimTreeNormal = { guibg = c.darker_black }
-  hi.NvimTreeNormalNC = { guibg = c.darker_black }
-  hi.NvimTreeEndOfBuffer = { guifg = c.darker_black }
-  hi.NvimTreeCursorLine = { guibg = c.black2 }
+  hi.NvimTreeNormal = { bg = c.darker_black }
+  hi.NvimTreeNormalNC = { bg = c.darker_black }
+  hi.NvimTreeEndOfBuffer = { fg = c.darker_black }
+  hi.NvimTreeCursorLine = { bg = c.black2 }
 
-  hi.NvimTreeWinSeparator = { guifg = c.darker_black, guibg = c.darker_black }
-  hi.NvimTreeWindowPicker = { guifg = c.red, guibg = c.black2 }
+  hi.NvimTreeWinSeparator = { fg = c.darker_black, bg = c.darker_black }
+  hi.NvimTreeWindowPicker = { fg = c.red, bg = c.black2 }
 
-  hi.NvimTreeGitNew = { guifg = c.yellow }
-  hi.NvimTreeGitDeleted = { guifg = c.red }
-  hi.NvimTreeGitIgnored = { guifg = c.light_grey }
-  hi.NvimTreeGitDirty = { guifg = c.orange }
-  hi.NvimTreeSpecialFile = { guifg = c.yellow, gui = "bold" }
-  hi.NvimTreeRootFolder = { guifg = c.red, gui = "bold" }
-  hi.NvimTreeGitStaged = { guifg = c.vibrant_green }
+  hi.NvimTreeGitNew = { fg = c.yellow }
+  hi.NvimTreeGitDeleted = { fg = c.red }
+  hi.NvimTreeGitIgnored = { fg = c.light_grey }
+  hi.NvimTreeGitDirty = { fg = c.orange }
+  hi.NvimTreeSpecialFile = { fg = c.yellow, bold = true }
+  hi.NvimTreeRootFolder = { fg = c.red, bold = true }
+  hi.NvimTreeGitStaged = { fg = c.vibrant_green }
 end
 
 return M

@@ -1,66 +1,65 @@
 local M = {}
 
----@param c base46.Colors
----@param hi base46.HighlightsTable
+---@type base46.Handler
 M.setup = function(c, hi)
-  hi.Normal = { guifg = c.base05, guibg = c.base00 }
-  hi.Underlined = { gui = "underline" }
-  hi.TooLong = { guifg = c.base08 }
-  hi.Bold = { gui = "bold" }
-  hi.Italic = { gui = "italic" }
+  hi.Normal = { fg = c.base05, bg = c.base00 }
+  hi.Underlined = { underline = true }
+  hi.TooLong = { fg = c.base08 }
+  hi.Bold = { bold = true }
+  hi.Italic = { italic = true }
 
   -- Spell
-  hi.SpellBad = { gui = "undercurl", guisp = c.base08 }
-  hi.SpellCap = { gui = "undercurl", guisp = c.base0D }
-  hi.SpellLocal = { gui = "undercurl", guisp = c.base0C }
-  hi.SpellRare = { gui = "undercurl", guisp = c.base0E }
+  hi.SpellBad = { undercurl = true, sp = c.base08 }
+  hi.SpellCap = { undercurl = true, sp = c.base0D }
+  hi.SpellLocal = { undercurl = true, sp = c.base0C }
+  hi.SpellRare = { undercurl = true, sp = c.base0E }
 
-  hi.NonText = { guifg = c.grey_fg }
+  hi.NonText = { fg = c.grey_fg }
 
-  hi.Search = { guifg = c.base01, guibg = c.base0A }
-  hi.IncSearch = { guifg = c.base01, guibg = c.base09 }
-  hi.Substitute = { guifg = c.base01, guibg = c.base0A, guisp = "none" }
+  hi.Search = { fg = c.base01, bg = c.base0A }
+  hi.IncSearch = { fg = c.base01, bg = c.base09 }
+  hi.Substitute = { fg = c.base01, bg = c.base0A, sp = "none" }
 
   -- Diffs
-  hi.DiffAdd = { guifg = c.blue }
-  hi.DiffChange = { guifg = c.light_grey }
-  hi.DiffDelete = { guifg = c.red }
-  hi.DiffText = { guifg = c.white, guibg = c.black2 }
+  hi.DiffAdd = { fg = c.blue }
+  hi.DiffChange = { fg = c.light_grey }
+  hi.DiffDelete = { fg = c.red }
+  hi.DiffText = { fg = c.white, bg = c.black2 }
 
-  hi.SignColumn = { guifg = c.base03, guisp = "NONE" }
+  hi.SignColumn = { fg = c.base03, sp = "NONE" }
 
-  hi.ModeMsg = { guifg = c.base0B }
-  hi.MoreMsg = { guifg = c.base0B }
-  hi.WarningMsg = { guifg = c.base08 }
-  hi.ErrorMsg = { guifg = c.base08, guibg = c.base00 }
-  hi.QuickFixLine = { guibg = c.base01, guisp = "none" }
+  hi.ModeMsg = { fg = c.base0B }
+  hi.MoreMsg = { fg = c.base0B }
+  hi.WarningMsg = { fg = c.base08 }
+  hi.ErrorMsg = { fg = c.base08, bg = c.base00 }
+  hi.QuickFixLine = { bg = c.base01, sp = "none" }
 
   -- Pop-up menu
-  hi.Pmenu = { guibg = c.one_bg }
-  hi.PmenuSbar = { guibg = c.one_bg }
-  hi.PmenuSel = { guibg = c.pmenu_bg, guifg = c.black }
-  hi.PmenuThumb = { guibg = c.grey }
+  hi.Pmenu = { bg = c.one_bg }
+  hi.PmenuSbar = { bg = c.one_bg }
+  hi.PmenuSel = { bg = c.pmenu_bg, fg = c.black }
+  hi.PmenuThumb = { bg = c.grey }
 
-  hi.TabLine = { guifg = c.base03, guibg = c.base01 }
-  hi.TabLineFill = { guifg = c.base03, guibg = c.base01 }
-  hi.TabLineSel = { guifg = c.base0B, guibg = c.base01, gui = "bold" }
+  hi.TabLine = { fg = c.base03, bg = c.base01 }
+  hi.TabLineFill = { fg = c.base03, bg = c.base01 }
+  hi.TabLineSel = { fg = c.base0B, bg = c.base01, bold = true }
 
-  hi.StatusLine = { guifg = c.light_grey, guibg = c.statusline_bg }
-  hi.StatusLineNC = { guifg = c.base03, guibg = c.one_bg }
+  hi.StatusLine = { fg = c.light_grey, bg = c.statusline_bg }
+  hi.StatusLineNC = { fg = c.base03, bg = c.one_bg }
 
-  hi.WinBar = { guifg = c.base05, guibg = nil }
-  hi.WinBarNC = { guifg = c.base04, guibg = nil }
+  hi.WinBar = { fg = c.base05, bg = nil }
+  hi.WinBarNC = { fg = c.base04, bg = nil }
 
-  hi.WildMenu = { guifg = c.base08, guibg = c.base0A }
+  hi.WildMenu = { fg = c.base08, bg = c.base0A }
 
-  hi.Folded = { guifg = c.light_grey, guibg = c.black2 }
-  hi.FoldColumn = { guifg = c.base0C, guibg = c.base01 }
+  hi.Folded = { fg = c.light_grey, bg = c.black2 }
+  hi.FoldColumn = { fg = c.base0C, bg = c.base01 }
 
   -- Floating windows
-  hi.FloatBorder = { guifg = c.blue }
-  hi.NormalFloat = { guibg = c.darker_black }
+  hi.FloatBorder = { fg = c.blue }
+  hi.NormalFloat = { bg = c.darker_black }
 
-  hi.WinSeparator = { guifg = c.line }
+  hi.WinSeparator = { fg = c.line }
 
   -- From kepano/flexoki-neovim:
   --
@@ -68,28 +67,28 @@ M.setup = function(c, hi)
   --    to link to them in plugin specific files instead of redefining the
   --    same group multiple times
   --
-  hi.MatchTag = { guifg = c.base08, guibg = c.base02 }
-  hi.MatchWord = { guibg = c.grey, guifg = c.white }
+  hi.MatchTag = { fg = c.base08, bg = c.base02 }
+  hi.MatchWord = { bg = c.grey, fg = c.white }
   hi.MatchParen = "MatchWord"
 
-  hi.Conceal = { guibg = "NONE" }
-  hi.Directory = { guifg = c.base0D }
+  hi.Conceal = { bg = "NONE" }
+  hi.Directory = { fg = c.base0D }
 
-  hi.SpecialKey = { guifg = c.base03 }
-  hi.Title = { guifg = c.base0D, guisp = "none" }
-  hi.Question = { guifg = c.base0D }
+  hi.SpecialKey = { fg = c.base03 }
+  hi.Title = { fg = c.base0D, sp = "none" }
+  hi.Question = { fg = c.base0D }
 
-  hi.LineNr = { guifg = c.grey }
-  hi.Cursor = { guifg = c.base00, guibg = c.base05 }
-  hi.CursorLine = { guibg = c.black2 }
-  hi.CursorLineNr = { guifg = c.white }
-  hi.CursorColumn = { guibg = c.black2, guisp = "none" }
-  hi.ColorColumn = { guibg = c.black2, guisp = "none" }
-  hi.Visual = { guibg = c.base02 }
-  hi.VisualNOS = { guifg = c.base08 }
+  hi.LineNr = { fg = c.grey }
+  hi.Cursor = { fg = c.base00, bg = c.base05 }
+  hi.CursorLine = { bg = c.black2 }
+  hi.CursorLineNr = { fg = c.white }
+  hi.CursorColumn = { bg = c.black2, sp = "none" }
+  hi.ColorColumn = { bg = c.black2, sp = "none" }
+  hi.Visual = { fg = "NONE", bg = c.one_bg3 }
+  hi.VisualNOS = { fg = c.base08 }
 
   -- Command-line expressions highlighting
-  hi.NvimInternalError = { guifg = c.red }
+  hi.NvimInternalError = { fg = c.red }
 end
 
 return M

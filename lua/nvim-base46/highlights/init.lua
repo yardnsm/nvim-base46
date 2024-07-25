@@ -20,6 +20,8 @@ M.setup = function(colors)
   require("nvim-base46.highlights.telescope").setup(c, hi)
   require("nvim-base46.highlights.git").setup(c, hi)
   require("nvim-base46.highlights.devicons").setup(c, hi)
+  require("nvim-base46.highlights.diffview").setup(c, hi)
+
 end
 
 ---@param colors base46.Colors

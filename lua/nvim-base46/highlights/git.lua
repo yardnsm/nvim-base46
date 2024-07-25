@@ -1,29 +1,28 @@
 local M = {}
 
----@param c base46.Colors
----@param hi base46.HighlightsTable
+---@type base46.Handler
 M.setup = function(c, hi)
   -- https://github.com/neovim/neovim/blob/master/runtime/syntax/gitcommit.vim
-  hi.gitcommitOverflow = { guifg = c.base08 }
-  hi.gitcommitSummary = { guifg = c.base0B }
-  hi.gitcommitComment = { guifg = c.base03 }
-  hi.gitcommitUntracked = { guifg = c.base03 }
-  hi.gitcommitDiscarded = { guifg = c.base03 }
-  hi.gitcommitSelected = { guifg = c.base03 }
-  hi.gitcommitHeader = { guifg = c.base0E }
-  hi.gitcommitSelectedType = { guifg = c.base0D }
-  hi.gitcommitUnmergedType = { guifg = c.base0D }
-  hi.gitcommitDiscardedType = { guifg = c.base0D }
-  hi.gitcommitBranch = { guifg = c.base09, gui = "bold" }
-  hi.gitcommitUntrackedFile = { guifg = c.base0A }
-  hi.gitcommitUnmergedFile = { guifg = c.base08, gui = "bold" }
-  hi.gitcommitDiscardedFile = { guifg = c.base08, gui = "bold" }
-  hi.gitcommitSelectedFile = { guifg = c.base0B, gui = "bold" }
+  hi.gitcommitOverflow = { fg = c.base08 }
+  hi.gitcommitSummary = { fg = c.base0B }
+  hi.gitcommitComment = { fg = c.base03 }
+  hi.gitcommitUntracked = { fg = c.base03 }
+  hi.gitcommitDiscarded = { fg = c.base03 }
+  hi.gitcommitSelected = { fg = c.base03 }
+  hi.gitcommitHeader = { fg = c.base0E }
+  hi.gitcommitSelectedType = { fg = c.base0D }
+  hi.gitcommitUnmergedType = { fg = c.base0D }
+  hi.gitcommitDiscardedType = { fg = c.base0D }
+  hi.gitcommitBranch = { fg = c.base09, bold = true }
+  hi.gitcommitUntrackedFile = { fg = c.base0A }
+  hi.gitcommitUnmergedFile = { fg = c.base08, bold = true }
+  hi.gitcommitDiscardedFile = { fg = c.base08, bold = true }
+  hi.gitcommitSelectedFile = { fg = c.base0B, bold = true }
 
   -- GitSigns
-  hi.GitSignsAdd = { guifg = c.vibrant_green }
-  hi.GitSignsChange = { guifg = c.blue }
-  hi.GitSignsDelete = { guifg = c.red }
+  hi.GitSignsAdd = { fg = c.vibrant_green }
+  hi.GitSignsChange = { fg = c.blue }
+  hi.GitSignsDelete = { fg = c.red }
 end
 
 return M

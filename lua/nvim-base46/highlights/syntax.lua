@@ -1,45 +1,44 @@
 local M = {}
 
----@param c base46.Colors
----@param hi base46.HighlightsTable
+---@type base46.Handler
 M.setup = function(c, hi)
-  hi.Comment = { guifg = c.grey_fg }
+  hi.Comment = { fg = c.grey_fg }
 
-  hi.Constant = { guifg = c.base09 }
-  hi.String = { guifg = c.base0B }
-  hi.Character = { guifg = c.base08 }
-  hi.Number = { guifg = c.base09 }
-  hi.Boolean = { guifg = c.base09 }
-  hi.Float = { guifg = c.base09 }
+  hi.Constant = { fg = c.base09 }
+  hi.String = { fg = c.base0B }
+  hi.Character = { fg = c.base08 }
+  hi.Number = { fg = c.base09 }
+  hi.Boolean = { fg = c.base09 }
+  hi.Float = { fg = c.base09 }
 
-  hi.Identifier = { guifg = c.base08, guisp = "none" }
-  hi.Function = { guifg = c.base0D }
+  hi.Identifier = { fg = c.base08, sp = "none" }
+  hi.Function = { fg = c.base0D }
 
-  hi.Statement = { guifg = c.base08 }
-  hi.Conditional = { guifg = c.base0E }
-  hi.Repeat = { guifg = c.base0A }
-  hi.Label = { guifg = c.base0A }
-  hi.Operator = { guifg = c.base05, guisp = "none" }
-  hi.Keyword = { guifg = c.base0E }
-  hi.Exception = { guifg = c.base08 }
+  hi.Statement = { fg = c.base08 }
+  hi.Conditional = { fg = c.base0E }
+  hi.Repeat = { fg = c.base0A }
+  hi.Label = { fg = c.base0A }
+  hi.Operator = { fg = c.base05, sp = "none" }
+  hi.Keyword = { fg = c.base0E }
+  hi.Exception = { fg = c.base08 }
 
-  hi.PreProc = { guifg = c.base0A }
-  hi.Include = { guifg = c.base0D }
-  hi.Define = { guifg = c.base0E, guisp = "none" }
-  hi.Macro = { guifg = c.base08 }
+  hi.PreProc = { fg = c.base0A }
+  hi.Include = { fg = c.base0D }
+  hi.Define = { fg = c.base0E, sp = "none" }
+  hi.Macro = { fg = c.base08 }
 
-  hi.Type = { guifg = c.base0A, guisp = "none" }
-  hi.StorageClass = { guifg = c.base0A }
-  hi.Structure = { guifg = c.base0E }
-  hi.Typedef = { guifg = c.base0A }
+  hi.Type = { fg = c.base0A, sp = "none" }
+  hi.StorageClass = { fg = c.base0A }
+  hi.Structure = { fg = c.base0E }
+  hi.Typedef = { fg = c.base0A }
 
-  hi.Special = { guifg = c.base0C }
-  hi.SpecialChar = { guifg = c.base0F }
-  hi.Tag = { guifg = c.base0A }
-  hi.Debug = { guifg = c.base08 }
-  hi.Delimiter = { guifg = c.base0F }
-  hi.Error = { guifg = c.base00, guibg = c.base08 }
-  hi.Todo = { guifg = c.base0A, guibg = c.base01 }
+  hi.Special = { fg = c.base0C }
+  hi.SpecialChar = { fg = c.base0F }
+  hi.Tag = { fg = c.base0A }
+  hi.Debug = { fg = c.base08 }
+  hi.Delimiter = { fg = c.base0F }
+  hi.Error = { fg = c.base00, bg = c.base08 }
+  hi.Todo = { fg = c.base0A, bg = c.base01 }
 end
 
 return M

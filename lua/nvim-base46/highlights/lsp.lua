@@ -1,26 +1,25 @@
 local M = {}
 
----@param c base46.Colors
----@param hi base46.HighlightsTable
+---@type base46.Handler
 M.setup = function(c, hi)
   -- LSP References
-  hi.LspReferenceText = { guibg = c.one_bg3 }
-  hi.LspReferenceRead = { guibg = c.one_bg3 }
-  hi.LspReferenceWrite = { guibg = c.one_bg3 }
+  hi.LspReferenceText = { bg = c.one_bg3 }
+  hi.LspReferenceRead = { bg = c.one_bg3 }
+  hi.LspReferenceWrite = { bg = c.one_bg3 }
 
   -- Lsp Diagnostics
-  hi.DiagnosticHint = { guifg = c.purple }
-  hi.DiagnosticError = { guifg = c.red }
-  hi.DiagnosticWarn = { guifg = c.yellow }
-  hi.DiagnosticInfo = { guifg = c.green }
+  hi.DiagnosticHint = { fg = c.purple }
+  hi.DiagnosticError = { fg = c.red }
+  hi.DiagnosticWarn = { fg = c.yellow }
+  hi.DiagnosticInfo = { fg = c.green }
 
   hi.DiagnosticFloatingHint = "DiagnosticHint"
   hi.DiagnosticFloatingError = "DiagnosticError"
   hi.DiagnosticFloatingWarn = "DiagnosticWarn"
   hi.DiagnosticFloatingInfo = "DiagnosticInfo"
 
-  hi.LspSignatureActiveParameter = { guifg = c.black, guibg = c.green }
-  hi.LspInlayHint = { guibg = c.black2, guifg = c.light_grey }
+  hi.LspSignatureActiveParameter = { fg = c.black, bg = c.green }
+  hi.LspInlayHint = { bg = c.black2, fg = c.light_grey }
 
   -- LSP Semantic Highlights
   hi["@lsp.type.class"] = "Structure"

@@ -1,94 +1,93 @@
 local M = {}
 
----@param c base46.Colors
----@param hi base46.HighlightsTable
+---@type base46.Handler
 M.setup = function(c, hi)
-  hi["@variable"] = { guifg = c.base08 }
-  hi["@variable.builtin"] = { guifg = c.base08, gui = "italic" }
-  hi["@variable.parameter"] = { guifg = c.base05 }
-  hi["@variable.member"] = { guifg = c.base05 }
-  hi["@variable.member.key"] = { guifg = c.base05 }
+  hi["@variable"] = { fg = c.base08 }
+  hi["@variable.builtin"] = { fg = c.base08, italic = true }
+  hi["@variable.parameter"] = { fg = c.base05 }
+  hi["@variable.member"] = { fg = c.base05 }
+  hi["@variable.member.key"] = { fg = c.base05 }
 
-  hi["@module"] = { guifg = c.base08 }
-  hi["@module.builtin"] = { guifg = c.base08, gui = "italic" }
+  hi["@module"] = { fg = c.base08 }
+  hi["@module.builtin"] = { fg = c.base08, italic = true }
 
-  hi["@constant"] = { guifg = c.base09 }
-  hi["@constant.builtin"] = { guifg = c.base09, gui = "italic" }
-  hi["@constant.macro"] = { guifg = c.base09 }
+  hi["@constant"] = { fg = c.base09 }
+  hi["@constant.builtin"] = { fg = c.base09, italic = true }
+  hi["@constant.macro"] = { fg = c.base09 }
 
-  hi["@string"] = { guifg = c.base0B }
-  hi["@string.regex"] = { guifg = c.base0C }
-  hi["@string.escape"] = { guifg = c.base0C }
-  hi["@character"] = { guifg = c.base08 }
-  hi["@character.special"] = { guifg = c.base08, gui = "italic" }
-  hi["@number"] = { guifg = c.base09 }
-  hi["@number.float"] = { guifg = c.base09 }
+  hi["@string"] = { fg = c.base0B }
+  hi["@string.regex"] = { fg = c.base0C }
+  hi["@string.escape"] = { fg = c.base0C }
+  hi["@character"] = { fg = c.base08 }
+  hi["@character.special"] = { fg = c.base08, italic = true }
+  hi["@number"] = { fg = c.base09 }
+  hi["@number.float"] = { fg = c.base09 }
 
-  hi["@annotation"] = { guifg = c.base0F }
-  hi["@attribute"] = { guifg = c.base0A }
-  hi["@field"] = { guifg = c.base05 }
-  hi["@parameter"] = { guifg = c.base05 }
-  hi["@error"] = { guifg = c.base08 }
+  hi["@annotation"] = { fg = c.base0F }
+  hi["@attribute"] = { fg = c.base0A }
+  hi["@field"] = { fg = c.base05 }
+  hi["@parameter"] = { fg = c.base05 }
+  hi["@error"] = { fg = c.base08 }
 
-  hi["@keyword.exception"] = { guifg = c.base08 }
-  hi["@keyword"] = { guifg = c.base0E }
-  hi["@keyword.function"] = { guifg = c.base0E }
-  hi["@keyword.return"] = { guifg = c.base0E }
-  hi["@keyword.operator"] = { guifg = c.base0E }
-  hi["@keyword.import"] = { guifg = c.base0D }
-  hi["@keyword.conditional"] = { guifg = c.base0E }
-  hi["@keyword.conditional.ternary"] = { guifg = c.base0E }
-  hi["@keyword.repeat"] = { guifg = c.base0A }
-  hi["@keyword.storage"] = { guifg = c.base0A }
-  hi["@keyword.directive.define"] = { guifg = c.base0E }
-  hi["@keyword.directive"] = { guifg = c.base0A }
+  hi["@keyword.exception"] = { fg = c.base08 }
+  hi["@keyword"] = { fg = c.base0E }
+  hi["@keyword.function"] = { fg = c.base0E }
+  hi["@keyword.return"] = { fg = c.base0E }
+  hi["@keyword.operator"] = { fg = c.base0E }
+  hi["@keyword.import"] = { fg = c.base0D }
+  hi["@keyword.conditional"] = { fg = c.base0E }
+  hi["@keyword.conditional.ternary"] = { fg = c.base0E }
+  hi["@keyword.repeat"] = { fg = c.base0A }
+  hi["@keyword.storage"] = { fg = c.base0A }
+  hi["@keyword.directive.define"] = { fg = c.base0E }
+  hi["@keyword.directive"] = { fg = c.base0A }
 
-  hi["@function"] = { guifg = c.base0D }
-  hi["@function.builtin"] = { guifg = c.base0D }
-  hi["@function.macro"] = { guifg = c.base08 }
-  hi["@function.call"] = { guifg = c.base0D }
-  hi["@function.method"] = { guifg = c.base0D }
-  hi["@function.method.call"] = { guifg = c.base0D }
-  hi["@constructor"] = { guifg = c.base0C }
+  hi["@function"] = { fg = c.base0D }
+  hi["@function.builtin"] = { fg = c.base0D }
+  hi["@function.macro"] = { fg = c.base08 }
+  hi["@function.call"] = { fg = c.base0D }
+  hi["@function.method"] = { fg = c.base0D }
+  hi["@function.method.call"] = { fg = c.base0D }
+  hi["@constructor"] = { fg = c.base0C }
 
-  hi["@operator"] = { guifg = c.base05 }
-  hi["@reference"] = { guifg = c.base05 }
-  hi["@punctuation.bracket"] = { guifg = c.base0F }
-  hi["@punctuation.delimiter"] = { guifg = c.base0F }
-  hi["@symbol"] = { guifg = c.base0B }
-  hi["@tag"] = { guifg = c.base0A }
-  hi["@tag.attribute"] = { guifg = c.base08 }
-  hi["@tag.delimiter"] = { guifg = c.base0F }
-  hi["@text"] = { guifg = c.base05 }
-  hi["@text.emphasis"] = { guifg = c.base09 }
-  hi["@text.strike"] = { guifg = c.base0F, gui = "strikethrough" }
-  hi["@type.builtin"] = { guifg = c.base0A }
-  hi["@definition"] = { guisp = c.base04, gui = "underline" }
-  hi["@scope"] = { gui = "bold" }
-  hi["@property"] = { guifg = c.base05 }
+  hi["@operator"] = { fg = c.base05 }
+  hi["@reference"] = { fg = c.base05 }
+  hi["@punctuation.bracket"] = { fg = c.base0F }
+  hi["@punctuation.delimiter"] = { fg = c.base0F }
+  hi["@symbol"] = { fg = c.base0B }
+  hi["@tag"] = { fg = c.base0A }
+  hi["@tag.attribute"] = { fg = c.base08 }
+  hi["@tag.delimiter"] = { fg = c.base0F }
+  hi["@text"] = { fg = c.base05 }
+  hi["@text.emphasis"] = { fg = c.base09 }
+  hi["@text.strike"] = { fg = c.base0F, strikethrough = true }
+  hi["@type.builtin"] = { fg = c.base0A }
+  hi["@definition"] = { sp = c.base04, underline = true }
+  hi["@scope"] = { bold = true }
+  hi["@property"] = { fg = c.base05 }
 
   -- Markup
-  hi["@markup.heading"] = { guifg = c.base0D }
-  hi["@markup.raw"] = { guifg = c.base09 }
-  hi["@markup.link"] = { guifg = c.base08 }
-  hi["@markup.link.url"] = { guifg = c.base09, gui = "underline" }
-  hi["@markup.link.label"] = { guifg = c.base0C }
-  hi["@markup.list"] = { guifg = c.base08 }
-  hi["@markup.strong"] = { gui = "bold" }
-  hi["@markup.underline"] = { gui = "underline" }
-  hi["@markup.italic"] = { gui = "italic" }
-  hi["@markup.strikethrough"] = { gui = "strikethrough" }
-  hi["@markup.quote"] = { guibg = c.black2 }
+  hi["@markup.heading"] = { fg = c.base0D }
+  hi["@markup.raw"] = { fg = c.base09 }
+  hi["@markup.link"] = { fg = c.base08 }
+  hi["@markup.link.url"] = { fg = c.base09, underline = true }
+  hi["@markup.link.label"] = { fg = c.base0C }
+  hi["@markup.list"] = { fg = c.base08 }
+  hi["@markup.strong"] = { bold = true }
+  hi["@markup.underline"] = { underline = true }
+  hi["@markup.italic"] = { italic = true }
+  hi["@markup.strikethrough"] = { strikethrough = true }
+  hi["@markup.quote"] = { bg = c.black2 }
 
-  hi["@comment"] = { guifg = c.grey_fg }
-  hi["@comment.todo"] = { guifg = c.yellow, guibg = c.darker_black }
-  hi["@comment.warning"] = { guifg = c.orange, guibg = c.darker_black }
-  hi["@comment.note"] = { guifg = c.blue, guibg = c.darker_black }
-  hi["@comment.error"] = { guifg = c.red, guibg = c.darker_black }
+  hi["@comment"] = { fg = c.grey_fg }
+  hi["@comment.todo"] = { fg = c.yellow, bg = c.darker_black }
+  hi["@comment.warning"] = { fg = c.orange, bg = c.darker_black }
+  hi["@comment.note"] = { fg = c.blue, bg = c.darker_black }
+  hi["@comment.error"] = { fg = c.red, bg = c.darker_black }
 
-  hi["@diff.plus"] = { guifg = c.green }
-  hi["@diff.minus"] = { guifg = c.red }
-  hi["@diff.delta"] = { guifg = c.light_grey }
+  hi["@diff.plus"] = { fg = c.green }
+  hi["@diff.minus"] = { fg = c.red }
+  hi["@diff.delta"] = { fg = c.light_grey }
 end
 
 return M

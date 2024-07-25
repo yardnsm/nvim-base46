@@ -1,38 +1,37 @@
 local M = {}
 
----@param c base46.Colors
----@param hi base46.HighlightsTable
+---@type base46.Handler
 M.setup = function(c, hi)
-  hi.TelescopeNormal = { guibg = c.darker_black }
+  hi.TelescopeNormal = { bg = c.darker_black }
 
-  hi.TelescopePreviewTitle = { guifg = c.black, guibg = c.green }
-  hi.TelescopePromptTitle = { guifg = c.black, guibg = c.red }
-  hi.TelescopePromptPrefix = { guifg = c.red, guibg = c.black2 }
+  hi.TelescopePreviewTitle = { fg = c.black, bg = c.green }
+  hi.TelescopePromptTitle = { fg = c.black, bg = c.red }
+  hi.TelescopePromptPrefix = { fg = c.red, bg = c.black2 }
 
-  hi.TelescopeSelection = { guibg = c.black2, guifg = c.grey_fg }
-  hi.TelescopeResultsDiffAdd = { guifg = c.green }
-  hi.TelescopeResultsDiffChange = { guifg = c.yellow }
-  hi.TelescopeResultsDiffDelete = { guifg = c.red }
+  hi.TelescopeSelection = { bg = c.black2, fg = c.grey_fg }
+  hi.TelescopeResultsDiffAdd = { fg = c.green }
+  hi.TelescopeResultsDiffChange = { fg = c.yellow }
+  hi.TelescopeResultsDiffDelete = { fg = c.red }
 
-  hi.TelescopeMatching = { guifg = c.dark_purple, gui = "bold" }
-  hi.TelescopeResultsNormal = { guifg = c.grey_fg, guibg = c.darker_black }
+  hi.TelescopeMatching = { fg = c.dark_purple, bold = true }
+  hi.TelescopeResultsNormal = { fg = c.grey_fg, bg = c.darker_black }
 
   local telescope_style = require("nvim-base46.config").options.telescope_style
 
   if telescope_style == "borderless" then
-    hi.TelescopeBorder = { guifg = c.darker_black, guibg = c.darker_black }
-    hi.TelescopePromptBorder = { guifg = c.black2, guibg = c.black2 }
-    hi.TelescopePromptNormal = { guifg = c.white, guibg = c.black2 }
-    hi.TelescopeResultsTitle = { guifg = c.darker_black, guibg = c.darker_black }
-    hi.TelescopePromptPrefix = { guifg = c.red, guibg = c.black2 }
+    hi.TelescopeBorder = { fg = c.darker_black, bg = c.darker_black }
+    hi.TelescopePromptBorder = { fg = c.black2, bg = c.black2 }
+    hi.TelescopePromptNormal = { fg = c.white, bg = c.black2 }
+    hi.TelescopeResultsTitle = { fg = c.darker_black, bg = c.darker_black }
+    hi.TelescopePromptPrefix = { fg = c.red, bg = c.black2 }
   elseif telescope_style == "bordered" then
-    hi.TelescopeBorder = { guifg = c.one_bg3 }
-    hi.TelescopePromptBorder = { guifg = c.one_bg3 }
-    hi.TelescopeResultsTitle = { guifg = c.black, guibg = c.green }
-    hi.TelescopePreviewTitle = { guifg = c.black, guibg = c.blue }
-    hi.TelescopePromptPrefix = { guifg = c.red, guibg = c.black }
-    hi.TelescopeNormal = { guibg = c.black }
-    hi.TelescopePromptNormal = { guibg = c.black }
+    hi.TelescopeBorder = { fg = c.one_bg3 }
+    hi.TelescopePromptBorder = { fg = c.one_bg3 }
+    hi.TelescopeResultsTitle = { fg = c.black, bg = c.green }
+    hi.TelescopePreviewTitle = { fg = c.black, bg = c.blue }
+    hi.TelescopePromptPrefix = { fg = c.red, bg = c.black }
+    hi.TelescopeNormal = { bg = c.black }
+    hi.TelescopePromptNormal = { bg = c.black }
   end
 end
 

@@ -1,4 +1,5 @@
 ---@alias base46.HighlightsTable table<string, vim.api.keyset.highlight | string>
+---@alias base46.Handler fun(c: base46.Colors, hi: base46.HighlightsTable)
 
 ---A table representation of all the base46 colors. It differs a bit from the original base46 table,
 ---as we're combining the base16 and base30 tables into one for convenience.
