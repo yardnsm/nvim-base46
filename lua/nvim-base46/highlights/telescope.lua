@@ -3,19 +3,19 @@ local M = {}
 ---@param c base46.Colors
 ---@param hi base46.HighlightsTable
 M.setup = function(c, hi)
-
   hi.TelescopeNormal = { guibg = c.darker_black }
 
   hi.TelescopePreviewTitle = { guifg = c.black, guibg = c.green }
   hi.TelescopePromptTitle = { guifg = c.black, guibg = c.red }
   hi.TelescopePromptPrefix = { guifg = c.red, guibg = c.black2 }
 
-  hi.TelescopeSelection = { guibg = c.black2, guifg = c.white }
+  hi.TelescopeSelection = { guibg = c.black2, guifg = c.grey_fg }
   hi.TelescopeResultsDiffAdd = { guifg = c.green }
   hi.TelescopeResultsDiffChange = { guifg = c.yellow }
   hi.TelescopeResultsDiffDelete = { guifg = c.red }
 
-  hi.TelescopeMatching = { guibg = c.one_bg, guifg = c.blue }
+  hi.TelescopeMatching = { guifg = c.dark_purple, gui = "bold" }
+  hi.TelescopeResultsNormal = { guifg = c.grey_fg, guibg = c.darker_black }
 
   local telescope_style = require("nvim-base46.config").options.telescope_style
 

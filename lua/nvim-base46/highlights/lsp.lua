@@ -4,9 +4,9 @@ local M = {}
 ---@param hi base46.HighlightsTable
 M.setup = function(c, hi)
   -- LSP References
-  hi.LspReferenceText = { guifg = c.darker_black, guibg = c.white }
-  hi.LspReferenceRead = { guifg = c.darker_black, guibg = c.white }
-  hi.LspReferenceWrite = { guifg = c.darker_black, guibg = c.white }
+  hi.LspReferenceText = { guibg = c.one_bg3 }
+  hi.LspReferenceRead = { guibg = c.one_bg3 }
+  hi.LspReferenceWrite = { guibg = c.one_bg3 }
 
   -- Lsp Diagnostics
   hi.DiagnosticHint = { guifg = c.purple }

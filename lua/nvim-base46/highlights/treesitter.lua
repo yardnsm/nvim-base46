@@ -61,9 +61,9 @@ M.setup = function(c, hi)
   hi["@tag.delimiter"] = { guifg = c.base0F }
   hi["@text"] = { guifg = c.base05 }
   hi["@text.emphasis"] = { guifg = c.base09 }
-  hi["@text.strike"] = { guifg = c.base0F, gui = 'strikethrough' }
+  hi["@text.strike"] = { guifg = c.base0F, gui = "strikethrough" }
   hi["@type.builtin"] = { guifg = c.base0A }
-  hi["@definition"] = { guisp = c.base04, gui = 'underline' }
+  hi["@definition"] = { guisp = c.base04, gui = "underline" }
   hi["@scope"] = { gui = "bold" }
   hi["@property"] = { guifg = c.base05 }
 
@@ -71,20 +71,20 @@ M.setup = function(c, hi)
   hi["@markup.heading"] = { guifg = c.base0D }
   hi["@markup.raw"] = { guifg = c.base09 }
   hi["@markup.link"] = { guifg = c.base08 }
-  hi["@markup.link.url"] = { guifg = c.base09, gui = 'underline' }
+  hi["@markup.link.url"] = { guifg = c.base09, gui = "underline" }
   hi["@markup.link.label"] = { guifg = c.base0C }
   hi["@markup.list"] = { guifg = c.base08 }
   hi["@markup.strong"] = { gui = "bold" }
-  hi["@markup.underline"] = { gui = 'underline' }
+  hi["@markup.underline"] = { gui = "underline" }
   hi["@markup.italic"] = { gui = "italic" }
-  hi["@markup.strikethrough"] = { gui = 'strikethrough' }
+  hi["@markup.strikethrough"] = { gui = "strikethrough" }
   hi["@markup.quote"] = { guibg = c.black2 }
 
   hi["@comment"] = { guifg = c.grey_fg }
-  hi["@comment.todo"] = { guifg = c.grey, guibg = c.white }
-  hi["@comment.warning"] = { guifg = c.black2, guibg = c.base09 }
-  hi["@comment.note"] = { guifg = c.black2, guibg = c.white }
-  hi["@comment.danger"] = { guifg = c.black2, guibg = c.red }
+  hi["@comment.todo"] = { guifg = c.yellow, guibg = c.darker_black }
+  hi["@comment.warning"] = { guifg = c.orange, guibg = c.darker_black }
+  hi["@comment.note"] = { guifg = c.blue, guibg = c.darker_black }
+  hi["@comment.error"] = { guifg = c.red, guibg = c.darker_black }
 
   hi["@diff.plus"] = { guifg = c.green }
   hi["@diff.minus"] = { guifg = c.red }

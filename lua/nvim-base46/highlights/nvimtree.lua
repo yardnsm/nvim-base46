@@ -24,9 +24,10 @@ M.setup = function(c, hi)
   hi.NvimTreeGitNew = { guifg = c.yellow }
   hi.NvimTreeGitDeleted = { guifg = c.red }
   hi.NvimTreeGitIgnored = { guifg = c.light_grey }
-  hi.NvimTreeGitDirty = { guifg = c.red }
+  hi.NvimTreeGitDirty = { guifg = c.orange }
   hi.NvimTreeSpecialFile = { guifg = c.yellow, gui = "bold" }
   hi.NvimTreeRootFolder = { guifg = c.red, gui = "bold" }
+  hi.NvimTreeGitStaged = { guifg = c.vibrant_green }
 end
 
 return M
