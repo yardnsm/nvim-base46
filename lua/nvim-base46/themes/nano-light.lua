@@ -4,7 +4,6 @@
 -- Credits to original theme https://github.com/rougier/nano-theme
 -- This is a modified version of it
 
----@type base46.Colors
 local M = {}
 
 M.base_30 = {

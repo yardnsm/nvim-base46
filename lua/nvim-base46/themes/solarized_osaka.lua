@@ -4,7 +4,6 @@
 -- Credits to original https://github.com/craftzdog/solarized-osaka.nvim
 -- This is a modified version of it
 
----@type base46.Colors
 local M = {}
 
 M.base_30 = {

@@ -14,7 +14,7 @@ write_colors_lua() {
 
   # Each base46 colors definition file ends with a call to some "override_theme" function, and a
   # "return". We only want the table, so we're discarding those things.
-  theme_contents="$(sed '/override_theme/d' "$theme_fullpath" | sed '/return M/d')"
+  theme_contents="$(sed '/override_theme/d' "$theme_fullpath" | sed '/return M/d' | sed '/---@/d')"
 
   # Will be written the to lua/themes/ folder
   theme_dest="../lua/nvim-base46/themes/$theme_name.lua"
