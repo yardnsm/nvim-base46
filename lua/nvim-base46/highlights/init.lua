@@ -21,6 +21,7 @@ M.setup = function(colors)
   require("nvim-base46.highlights.git").setup(c, hi)
   require("nvim-base46.highlights.devicons").setup(c, hi)
   require("nvim-base46.highlights.diffview").setup(c, hi)
+  require("nvim-base46.highlights.neogit").setup(c, hi)
 
 end
 
