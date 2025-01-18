@@ -3,6 +3,8 @@ local M = {}
 ---@type base46.Handler
 M.setup = function(c, hi)
   hi.Normal = { fg = c.base05, bg = c.base00 }
+  -- hi.Normal = { fg = c.base05 }
+
   hi.Underlined = { underline = true }
   hi.TooLong = { fg = c.base08 }
   hi.Bold = { bold = true }
