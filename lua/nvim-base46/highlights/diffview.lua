@@ -4,8 +4,8 @@ local M = {}
 
 ---@type base46.Handler
 M.setup = function(c, hi)
-  hi.DiffviewFilePanelTitle = "NvimTreeRootFolder"
-  hi.DiffviewFilePanelConflicts = "NvimTreeRootFolder"
+  hi.DiffviewFilePanelTitle = { fg = c.red, bold = true }
+  hi.DiffviewFilePanelConflicts = { fg = c.red, bold = true }
   hi.DiffviewFilePanelCounter = "Comment"
   hi.DiffviewFilePanelFileName = { fg = c.light_grey }
   hi.DiffviewFilePanelSelected = { fg = c.folder_bg }

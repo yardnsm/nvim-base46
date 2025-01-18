@@ -9,6 +9,9 @@ M.setup = function(c, hi)
 
   hi.NeoTreeWinSeparator = { fg = c.darker_black, bg = c.darker_black }
 
+  hi.NeoTreeDirectoryName = { fg = c.folder_bg }
+  hi.NeoTreeDirectoryIcon = { fg = c.folder_bg }
+
   hi.NeoTreeGitAdded = { fg = c.yellow }
   hi.NeoTreeGitDeleted = { fg = c.red }
   hi.NeoTreeGitIgnored = { fg = c.light_grey }

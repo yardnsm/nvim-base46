@@ -1,5 +1,6 @@
 local M = {}
 
+-- These are changing in ./init.lua
 M.bg = "#000000"
 M.fg = "#ffffff"
 
