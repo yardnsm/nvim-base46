@@ -5,6 +5,7 @@
 ---as we're combining the base16 and base30 tables into one for convenience.
 ---@class base46.Colors
 ---@field type "light" | "dark"
+---@field polish_hl table<string, base46.HighlightsTable> | nil
 ---@field white string
 ---@field black string usually your theme bg
 ---@field darker_black string 6% darker than black

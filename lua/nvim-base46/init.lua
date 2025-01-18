@@ -36,6 +36,7 @@ M.load = function(opts)
 
   -- Highlight!
   highlights.setup(M.colors)
+  highlights.setup_polish(M.colors)
 
   if config.options.terminal_colors then
     highlights.setup_terminal(M.colors)

@@ -46,4 +46,20 @@ M.setup_terminal = function(colors)
   vim.g.terminal_color_15 = colors.base07
 end
 
+---@param colors base46.Colors
+M.setup_polish = function(colors)
+  if colors.polish_hl == nil then
+    return
+  end
+
+  local hi = util.highlight
+
+  for _, highlights in pairs(colors.polish_hl) do
+    for hlgroup, args in pairs(highlights) do
+      hi[hlgroup] = args
+    end
+  end
+
+  end
+
 return M
